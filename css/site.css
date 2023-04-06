@@ -1,28 +1,246 @@
 :root {
-    --cf-dark: #212121;
-    --cf-light: #ebebeb;
-    --cf-darkblue: #00223d;
-    --cf-highlight: #fae100;
+  --cf-dark: #212121;
+  --cf-light: #ebebeb;
+  --cf-darkblue: #00223d;
+  --cf-highlight: #fae100;
+  --cf-bodyFont: "Roboto";
+  --cf-subFont: "Fira Sans";
+  --cf-raceFont: "Racing Sans One";
 }
-
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-image: url("/img/LandingPage_1920.png");
-    background-position: top right;
-    background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/img/LandingPage_1920.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-color: var(--cf-darkblue);
+}
+
+.navLogo {
+  max-width: 3rem;
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--cf-light);
 }
 
 .content {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.btn-primary {
+  background-color: var(--cf-highlight);
+  border-color: var(--cf-dark);
+  color: var(--cf-darkblue);
 }
 
 .footer {
-    flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+.mainContent-wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  transform: translate(-15%, 2%);
+}
+
+.bodyTextHead {
+  font-family: var(--cf-bodyFont);
+  font-weight: bold;
+  font-size: 3rem;
+  color: var(--cf-light);
+  line-height: 2.5rem;
+  text-transform: capitalize;
+}
+
+.mainTitle {
+  font-family: var(--cf-raceFont);
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: var(--cf-subFont);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+}
+
+.mainTitle,
+.subtitle {
+  color: var(--cf-light);
+}
+
+/*** @Media Queries!!!!! ***/
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    display: none;
+  }
+
+  body {
+    background-image: url(/img/LandingPageNewSm.png);
+    background-position: top;
+    background-size: 100% 50%;
+    object-fit: fill;
+  }
+
+  .mainContent {
+    text-align: left;
+    transform: translateY(300%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    transform: translate(-2%);
+  }
+
+  .mainTitle {
+    font-family: var(--cf-raceFont);
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-family: var(--cf-subFont);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.03rem;
+    line-height: .6rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    body {
+        background-image: url(/img/LandingPageTablet.png);
+    }
+    .content {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        transform: translate(-6%, 2%);
+      }
+
+      .mainTitle {
+        font-family: var(--cf-raceFont);
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 3rem;
+        text-transform: uppercase;
+      }
+    
+      .subtitle {
+        font-family: var(--cf-subFont);
+        text-transform: uppercase;
+        font-size: .7rem;
+        letter-spacing: rem;
+        line-height: .4rem;
+      }
+
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+    body {
+        background-image: url(/img/LandingPageLg.png);
+    }
+
+    .content {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        transform: translate(-1%, 2%);
+      }
+
+      .mainTitle {
+        font-family: var(--cf-raceFont);
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 3rem;
+        text-transform: uppercase;
+      }
+    
+      .subtitle {
+        font-family: var(--cf-subFont);
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        letter-spacing: .04rem;
+        line-height: 1rem;
+      }
+
+
+
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    body {
+        background-image: url(/img/LandingPageALittleLarger.png);
+    } 
+    
+    .content {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        transform: translate(-1%, 2%);
+      }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+    body {
+        background-image: url(/img/LandingPage_1920.png);
+    }
+
+    .content {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        transform: translate(-15%, 1%);
+      }
+
+      .mainTitle {
+        font-family: var(--cf-raceFont);
+        font-size: 5.1rem;
+        font-weight: bold;
+        line-height: 4.5rem;
+        text-transform: uppercase;
+      }
+    
+      .subtitle {
+        font-family: var(--cf-subFont);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: .35rem;
+        line-height: 2rem;
+      }
+
+
 }
